@@ -1,30 +1,30 @@
-// A user can post a tweet that consists of a short text message and their username.
+1) Look at your specs and/or user stories
 
-// A user can post a tweet and view it in their news feed.
+<img src="./twitterplan.jpg">
 
-// A user can view a news feed that shows the tweets of other users they follow.
+2) Highlight nouns in specs--those are likely candidates for objects
+3) Highlight verbs in specs--those are likely candidates for methods 
+  _Note: Figuring out what objects should hold those methods can be a challenge, but generally an object should track its own info/be responsible for itself._
 
-// Can “Like” a tweet and see that tweet’s Likes increase.
+Nouns = objects
+- User
+- Tweet
+- Newsfeed
 
-// Can retweet another user’s tweet.
+Verbs = methods that go along with an object
+#### User
+ - Post
+ - Like
+ - Retweet
+ - Follow
 
-// Nouns = objects
-// User
-// Tweet
-// Newsfeed
+#### Tweet
+ - increaseLikes
+#### Newsfeed
+ - Show
 
-// Verbs = methods that go along with an object
-// User
-// - Post
-// - Like
-// - Retweet
-// - Follow
-
-// Tweet
-// - increaseLikes
-// Newsfeed
-//  - Show
-
+4) Code!
+```
 function User(name) {
   this.userName = name;
   this.tweets = [];
@@ -50,5 +50,12 @@ function Newsfeed() {
 }
 
 Newsfeed.prototype.show(userId) {
-
+// will get list of posts by all that user is following
 }
+```
+
+And so on and so forth! 😄
+
+More resources: The Lynda/LinkedIn Learning* course <a href = "https://www.lynda.com/Python-tutorials/Programming-Foundations-Object-Oriented-Design/731735-2.html"> Programming Foundations: Object-Oriented Design</a> is helpful and very approachable but it's better if you've already learned about classes and some basics of OOP. 
+
+*Seattle (and Portland?) library card holders already have subscriptions to Lynda!
